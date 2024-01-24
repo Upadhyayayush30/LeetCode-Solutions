@@ -31,6 +31,6 @@ private:
             }
             start = start->next;
         }
-        return 0; 
+        return 0; // No greater node found
     }
 };
