@@ -24,8 +24,8 @@ private:
         int left = diameter(curr->left, res);
         int right = diameter(curr->right, res);
 
-        res = std::max(res, left + right);
+        res = max(res, left + right);
 
-        return std::max(left, right) + 1;
+        return max(left, right) + 1;
     }
 };
