@@ -19,7 +19,7 @@ public:
         if(left== NULL) return right;
         if(right== NULL) return left;
 
-        return root;
+        return root; //if both left and right are not null , means p and q are in different subtrees therefore return the root 
 
 
         
