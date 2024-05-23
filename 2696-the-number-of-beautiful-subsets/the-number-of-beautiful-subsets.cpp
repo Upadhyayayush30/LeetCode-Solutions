@@ -1,33 +1,31 @@
 class Solution {
 public:
-    int beautifulSubsets(vector<int>& nums, int k) {
-        count = 0;
-        explore(nums, k, 0);
-        return count - 1;
-    }
-
-private:
-    int count;
-    unordered_map<int, int> visited;
-
-    void explore(vector<int>& nums, int k, int index) {
-        if (index == nums.size()) {
-            count++;
+    int result;
+    int K;
+    void solve(int idx, vector<int>&nums, unordered_map<int , int>&mp){
+        if(idx>=nums.size()){
+            result++;
             return;
         }
 
-        int num = nums[index];
+        //not take 
+        solve(idx+1,nums,mp);
 
-        if (visited.find(num - k) == visited.end() &&
-            visited.find(num + k) == visited.end()) {
-            visited[num]++;
-            explore(nums, k, index + 1);
-            visited[num]--;
-            if (visited[num] == 0) {
-                visited.erase(num);
-            }
+        //take
+        if(!mp[nums[idx]-K] && !mp[nums[idx]+K]){
+            mp[nums[idx]]++;//do
+            solve(idx+1,nums,mp);//explore
+            mp[nums[idx]]--;//undo
         }
-
-        explore(nums, k, index + 1);
     }
+    int beautifulSubsets(vector<int>& nums, int k) {
+        result=0;
+        K=k;
+        unordered_map<int,int>mp;
+        solve(0,nums,mp);
+        return result-1;//excluding empty set
+
+    }
+
+
 };
