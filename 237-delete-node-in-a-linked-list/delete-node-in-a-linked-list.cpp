@@ -14,6 +14,6 @@ public:
         node->val=nextNode->val;
         node->next=nextNode->next;
         nextNode->next=nullptr;
-        delete(nextNode);  
+          
     }
 };
