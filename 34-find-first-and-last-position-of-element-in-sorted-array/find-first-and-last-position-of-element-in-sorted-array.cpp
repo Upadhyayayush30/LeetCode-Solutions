@@ -15,7 +15,7 @@ public:
             }
         }
 
-        // Finding the last occurrence
+      
         low = 0, high = nums.size() - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
