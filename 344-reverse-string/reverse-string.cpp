@@ -1,16 +1,13 @@
-#include <vector>
-#include <algorithm> // For std::swap
-
 class Solution {
 public:
-    void reverseString(std::vector<char>& s) {
-        int left = 0;
-        int right = s.size() - 1;
-        
-        while (left < right) {
-            std::swap(s[left], s[right]);
-            ++left;
-            --right;
+    void reverseString(vector<char>& s) {
+        int n =s.size();
+        int temp=0;
+        for(int i=0;i<n/2;i++){
+            swap(s[i],s[n-i-1]);
+            
         }
+        
+        
     }
 };
