@@ -7,7 +7,5 @@ public:
             swap(s[i],s[n-i-1]);
             
         }
-        
-        
     }
 };
