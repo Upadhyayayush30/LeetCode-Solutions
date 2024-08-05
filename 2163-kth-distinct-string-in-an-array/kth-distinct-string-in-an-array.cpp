@@ -1,4 +1,4 @@
-/*class Solution {
+class Solution {
 public:
     string kthDistinct(vector<string>& arr, int k) {
         unordered_map<string, bool> map;
@@ -23,8 +23,8 @@ public:
 
         return "";  
     }
-};*/
-class Solution {
+};
+/*class Solution {
 public:
     string kthDistinct(vector<string>& arr, int k) {
         unordered_map<string, int> counter;
@@ -37,4 +37,4 @@ public:
         }
         return "";
     }
-};
+};*/
