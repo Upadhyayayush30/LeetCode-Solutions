@@ -2,8 +2,8 @@ class Solution {
 public:
     int minLength(string s) {
         int n = s.length();
-        int i =0;
-        int j=1;
+        int i =0;//WRITE CHARACTER
+        int j=1;//READ CHARACTER
         while(j<n){
             if(i<0){
                 i++;
