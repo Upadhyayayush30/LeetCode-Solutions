@@ -5,7 +5,7 @@ public:
             return "";
         }
         else{
-            return str1.substr(0,gcd(str1.length(),str2.length())); // RETURN GCD OF LENGTH OF STRINGS FROM 0 TO THE GCD OBTAINED
+            return str1.substr(0,gcd(str1.length(),str2.length())); // RETURN FROM STARTING LENGTH OF  SUBSTRINGS I.E 0 TO THE GCD OF SUBSTRINGS OBTAINED
         }
     }
 };
